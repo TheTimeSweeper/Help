@@ -12,8 +12,8 @@ using UnityEngine;
 
 namespace Help
 {
-    [BepInPlugin("com.thetimesweeper.help", "help", "1.0.0")]
-    public class HelpPluginPlugin : BaseUnityPlugin {
+    [BepInPlugin("com.thetimesweeper.OptimizeCookingStutter", "OptimizeCookingStutter", "1.0.0")]
+    public class HelpPlugin : BaseUnityPlugin {
 
         public static InventoryItem.ITEM_TYPE[] cachedAllMeals;
 
@@ -21,13 +21,13 @@ namespace Help
 
         void Awake()
         {
-            //Log.Init(Logger);        
+            //Log.Init(Logger);
 
             bool recipeCaching = Config.Bind(
                 "Hello",
                 "RecipeCaching",
-                true,
-                "caches GetAllMeals and GetRecipe. These optimizations take advantage of the fact that these collections are hard coded, so if the community ever adds new meals or recipes, disable this").Value;
+                false,
+                "caches GetAllMeals and GetRecipe. These optimizations cache existing meals and recipes, so if another mod adds new meals or recipes, this may prevent those from working").Value;
 
             if (recipeCaching)
             {

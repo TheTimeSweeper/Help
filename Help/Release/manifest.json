@@ -1,0 +1,10 @@
+{
+    "name": "OptimizeCookingStutter",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/TheTimeSweeper/Help",
+    "description": "Fix the lag/stutter/freeze when adding a cooking meal recipe to the queue",
+    "dependencies": [
+        "BepInEx-BepInExPack_CultOfTheLamb-5.4.2101",
+        "TheTimesweeper-HookGenPatcher-1.2.1"
+    ]
+}

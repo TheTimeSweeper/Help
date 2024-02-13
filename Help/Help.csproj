@@ -71,7 +71,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /y &quot;$(TargetPath)&quot; &quot;\\DESKTOP-F5PADMH\EnforcerBuild&quot;" />
+    <Exec Command="copy /y &quot;$(TargetPath)&quot; &quot;\\DESKTOP-F5PADMH\EnforcerBuild&quot;&#xD;&#xA;&#xD;&#xA;copy /y &quot;$(TargetPath)&quot; &quot;$(ProjectDir)\Release&quot;" />
   </Target>
 
 </Project>
